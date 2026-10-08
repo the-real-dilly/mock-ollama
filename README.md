@@ -33,3 +33,15 @@ The default script follows the LangChain SQL agent tutorial (list tables, schema
 
     pip install pytest openai
     python -m pytest
+
+## Demo: LangChain SQL agent
+
+`demo/` runs the LangChain SQL tutorial agent (`create_agent` + `SQLDatabaseToolkit`) against the mock.
+
+    curl -L -o demo/Chinook.db https://storage.googleapis.com/benchmarks-artifacts/chinook/Chinook.db
+    pip install -r demo/requirements.txt
+    python mock_ollama.py            # terminal 1
+    python demo/sql_agent.py         # terminal 2
+    cd demo && python -m pytest      # end-to-end test (starts its own mock)
+
+With no `OPENAI_API_KEY`/`OPENAI_BASE_URL` set, the demo targets the mock. Set a real key to run against OpenAI.
