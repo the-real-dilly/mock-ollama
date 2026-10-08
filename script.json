@@ -1,0 +1,6 @@
+[
+  {"tool_calls": [{"name": "sql_db_list_tables", "arguments": {"tool_input": ""}}]},
+  {"tool_calls": [{"name": "sql_db_schema", "arguments": {"table_names": "Album"}}]},
+  {"tool_calls": [{"name": "sql_db_query", "arguments": {"query": "SELECT COUNT(*) FROM Album;"}}]},
+  {"content": "There are 347 albums in the database."}
+]
